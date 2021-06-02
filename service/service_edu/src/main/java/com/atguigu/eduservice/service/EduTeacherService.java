@@ -1,8 +1,10 @@
 package com.atguigu.eduservice.service;
 
 import com.atguigu.eduservice.entity.EduTeacher;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -15,4 +17,5 @@ import org.springframework.beans.factory.annotation.Autowired;
 public interface EduTeacherService extends IService<EduTeacher> {
 
 
+    public Map<String, Object> pageListWeb(Page<EduTeacher> pageParam);
 }
